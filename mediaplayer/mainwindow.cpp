@@ -106,7 +106,7 @@ void MainWindow::on_Play_clicked()
 
     if(reproductor->state() == QMediaPlayer::StoppedState){
         on_actionAbrirVideo_triggered();
-    //    on_actionPlayVideo_triggered();
+
      }
     else if(reproductor->state() == QMediaPlayer::PausedState){
         on_actionPlayVideo_triggered();
