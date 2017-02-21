@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>677</width>
-    <height>310</height>
+    <width>653</width>
+    <height>303</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -20,34 +20,26 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QVideoWidget" name="widget" native="true">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
+     <widget class="QVideoWidget" name="viewfinder" native="true"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Play">
+      <property name="text">
+       <string>Play</string>
       </property>
      </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton">
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <widget class="QPushButton" name="Stop">
+      <property name="text">
+       <string>Stop</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -56,7 +48,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>677</width>
+     <width>653</width>
      <height>21</height>
     </rect>
    </property>
@@ -65,17 +57,24 @@
      <string>VLC Camara</string>
     </property>
     <addaction name="actionCamara"/>
+    <addaction name="separator"/>
     <addaction name="actionApagar"/>
+    <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menuVLC_Video">
     <property name="title">
      <string>VLC Video</string>
     </property>
     <addaction name="actionAbrirVideo"/>
+    <addaction name="separator"/>
     <addaction name="actionPlayVideo"/>
+    <addaction name="separator"/>
     <addaction name="actionPauseVideo"/>
+    <addaction name="separator"/>
     <addaction name="actionStopVideo"/>
+    <addaction name="separator"/>
     <addaction name="actionRewindVideo"/>
+    <addaction name="separator"/>
     <addaction name="actionForwardVideo"/>
    </widget>
    <addaction name="menuVLC_pobre"/>
@@ -136,7 +135,7 @@
   <customwidget>
    <class>QVideoWidget</class>
    <extends>QWidget</extends>
-   <header>QVideoWidget</header>
+   <header location="global">QVideoWidget</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
