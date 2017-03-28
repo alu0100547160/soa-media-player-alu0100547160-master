@@ -50,7 +50,7 @@ void MainWindow::on_actionAbrirVideo_triggered()
         camera->stop();
 
     reproductor->setVideoOutput(ui->viewfinder);
-    QString Video = QFileDialog::getOpenFileName(this,"Abrir Video","","video file (*.*)");
+    QString Video = QFileDialog::getOpenFileName(this,"Abrir Video","","video file (*.mp4)");
     on_actionStopVideo_triggered();//Parar el video que se este reproduciendo cuando quiero bsucar otro
 
     reproductor->setMedia(QUrl::fromLocalFile(Video));
